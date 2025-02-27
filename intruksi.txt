@@ -1,0 +1,17 @@
+fitur yang harus ada di mission 4
+-bisa menulis dan menabahkan agenda to do list
+-menampilkan daftar to do list yang harus dikerjakan dalam hari tertentu
+-mencoret pekerjaan yang sudah selesai dilakukan dengan mengklik checkbox
+-menampilkan pekerjaan yang selesai di lakukan dalam list kolom DONE
+-hapus semua tugas yang di buat
+
+DETAIL
+-profil pengguna
+-time(informasi,waktu, hari, tanggal)
+-text area(menuliskan tugas)
+-level prioritas(tingkatan urgensi aktivitas terbagi 3 kategori ,low ,medium, high)
+-button submit(menampilkan saat ingin membuat tugas di text area)
+-kolom centang(untuk mengecek status to do, jika sudah mengerjakan beri fitur coret )
+-to do(memuat tabel to do list, berisi informasi tugas yang akan di kerjakan dan sedang di kerjakan)
+-done (memuat to-do yang sudah selesai)
+-button delete(menghapus seluruh list to do yang di buat)
