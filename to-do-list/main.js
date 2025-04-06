@@ -10,12 +10,17 @@ add.addEventListener("click", (e) => {
 
 const deleteAll = document.getElementById("Delete");
 deleteAll.addEventListener('click', function(){
-    const doubleCheck = confirm("are you sure to delete all your task?")
-    if(doubleCheck == true){
-        alert('all task has been deleted')
+const doubleCheck = confirm("are you sure to delete all your task?")
+    if(doubleCheck == true && yourForm.innerHTML.trim() === ''){
+        alert('you have no assignment')
+        console.log(1)
+        return;
+    } else if (doubleCheck == true){
+        console.log(2)
         yourForm.innerHTML = '';
         done.innerHTML = '';
-    } else{
+    }  else{
+        console.log(3)
         return;
     }
 })
@@ -86,7 +91,7 @@ submit.addEventListener('click', function(e){
      if (deadLine == ''){
         alert('put your deadline first')
         return;
-     } else if (deadLine < (deadLine.min = new Date().toISOString().split("T")[0])){
+     } else if (deadLine < (deadLine.min = new Date().toISOString().split("T")[0] + 1)){
         alert('do not give a date lower than the current date')
         return;
      }
@@ -107,7 +112,7 @@ submit.addEventListener('click', function(e){
      
     // membuat cek list
      checkbox.addEventListener('change', function(){
-        if(this.checked) {
+        if(checkbox.checked) {
             done.appendChild(container)
             container.classList.add('opacity-75');
             spanInput.classList.add('line-through', 'text-gray-500');
@@ -134,10 +139,8 @@ submit.addEventListener('click', function(e){
     container.appendChild(checkbox);
     container.appendChild(label);
     yourForm.appendChild(container);
-   input.value = '';
 
-   const filter = document.getElementById('filter');
-   
     addTask.style.display = 'none';
 })
 
+input.value = '';
