@@ -3,29 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> <link rel="stylesheet" href="../src/output.css">
+    <title>TO DO LIST</title> <link rel="stylesheet" href="../dist/output.css">
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <header>
+<body class="h-[100vh] bg-linear-to-t from-blue-300 to-blue-600 bg-no-repeat bg-cover  flex justify-center">
+    <div class=" m-auto my-4 w-[50%] rounded-2xl bg-linear-to-b from-blue-300 to-blue-500">
+        <div class="flex flex-row  items-center p-2.5">
+            <header class="flex flex-row w-[100%] justify-between items-center">
                 <img src="content/black-3-nobackground.png" alt="">
-                <h3>fitrah ramadhan</h3>
+                
+                <div>
+                    <h3 class="text-xl font-semibold ">M Fitrah Ramadhan</h3>
+                    <h6 class="text-xs opacity-85">softwere develoment</h6>
+                </div>
             </header>
-            <nav>
-                <p>completed task</p>
-            </nav>    
         </div>
-        <main>
-            <div>
-    
+        <main class="h-[500px] overflow-x-hidden flex flex-col relative">
+            <div id="section-1" class="grow-[3]">
+                <h3 class="text-center font-bold text-gray-800">TO DO LIST</h3>
+                <form action="" id="your-form">
+               
+              </form>
+              <h1 class="text-center font-bold text-gray-800">TASKS DONE</h1>
+              <form action="" id="done" class=" flex flex-col">
+                
+              </form>
             </div>
-            <form action="">
-                <p>priority</p>
-                <button>delete all</button>
-                <p>add task</p>
-            </form>
-        </main>
+          <div id="section-2" class="hidden">
+                <form action="" id="form" class="flex flex-col bg-white w-[100%] h-auto absolute top-0 p-2 text-center ">
+                    <input type="text" placeholder="masukan tugas" id="input" class="bg-white p-2 mb-1.5 border-solid border-black rounded-2xl">
+                    <button id="submit" class="bg-green-600 p-2 rounded-2xl mb-1">submit</button>                   
+                    <input type="date" name="" id="inputDate">
+                    <select name="" id="select" class="p-1 bg-amber-400 text-center border-solid border-black rounded-2xl mb-1.5">
+                    <option value="" class="bg-[#444]">Priority</option>
+                    <option class="bg-red-500" value="HIGH">HIGH</option>
+                    <option class="bg-yellow-500" value="MEDIUM">MEDIUM</option>
+                    <option class="bg-green-500" value="LOW">LOW</option>
+                   </select>
+                    <button class="bg-red-600 p-1 w-[50%] rounded-2xl">cancel</button>
+                </form>
+          </div>
+          
+        </main>   
+        <footer>
+            <span id="add" class="bg-green-500 p-1.5 w-[100%] rounded-2xl block mb-1.5 text-center">add task</span>
+            <span id="Delete" class="bg-red-600 p-1.5  w-[100%] rounded-2xl block text-center">Delete All</span>
+           
+        </footer>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
