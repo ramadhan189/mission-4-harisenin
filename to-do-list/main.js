@@ -53,7 +53,7 @@ submit.addEventListener('click', function(e){
     // membuat checkbox
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    checkbox.id = 'task' + `${count++}`;
+    checkbox.id = `task${count++}`;
     
     //membuat isi input
     const spanInput = document.createElement('span');
@@ -62,7 +62,7 @@ submit.addEventListener('click', function(e){
     
     //membuat isi opsi di html di dalan label
     const spanSelect = document.createElement('span');
-    spanSelect.textContent = ' (status: ' + `${option}` + ')';
+    spanSelect.textContent = `( ${option} )`;
     spanSelect.classList.add('ml-4')
      if(option == 'HIGH') {
          spanSelect.classList.add('text-red-500', 'text-xs')
@@ -86,7 +86,7 @@ submit.addEventListener('click', function(e){
      //membuat tanggal date line
      const deadLine = document.getElementById('inputDate').value;
      const spanDeadLine = document.createElement('span');
-     spanDeadLine.textContent = 'deadline: ' + `${deadLine}`
+     spanDeadLine.textContent = `deadline: ${deadLine}`;
      spanDeadLine.classList.add('opacity-50', 'text-xs', 'font-semibold', 'ml-6');
      if (deadLine == ''){
         alert('put your deadline first')
