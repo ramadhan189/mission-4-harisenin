@@ -62,7 +62,7 @@ submit.addEventListener('click', function(e){
     
     //membuat isi opsi di html di dalan label
     const spanSelect = document.createElement('span');
-
+    spanSelect.textContent = `${option}`
     spanSelect.classList.add('ml-4')
      if(option == 'HIGH') {
          spanSelect.classList.add('text-red-500', 'text-xs')
